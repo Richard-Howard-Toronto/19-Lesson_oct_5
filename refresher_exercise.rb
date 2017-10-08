@@ -1,6 +1,9 @@
 
   require 'pry'
 
+
+  #THREE WAYS
+
   a = "this is a test"
 
   counter = 0
@@ -37,3 +40,12 @@ puts "--------------------------------------------------"
 
 
   word_count('this is a second string that contains more words about the subject matter... how many words? ')
+
+
+  #CHAPTER 6, page 200
+
+  text = "this is a test of the text"
+  word_count_hash = Hash.new 0  #the 0 creates a default value
+  text.split.each { |word| word_count_hash[word.downcase] += 1}
+  p word_count_hash
+  p "the number of words is....    #{word_count_hash.count}"
